@@ -71,7 +71,7 @@ function validarservicio2() {
         alert("No puedes escoger el mismo servicio dos veces, vuelve a intentarlo")
     }
 }
-
+ 
 function valorservicio(servicio) {
     valores = [20, 20, 10, 50, 50, 30]
     switch (servicio) {
