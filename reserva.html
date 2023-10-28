@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./assets/css/index.css">
+  <link rel="stylesheet" href="./assets/css/formulario.css">
   <title>Reservación X Hotel</title>
 </head>
 
@@ -29,6 +29,7 @@
   </header>
 
   <main>
+    
     <h4>Llena los siguientes campos.</h4>
 
     <form id="formulario" method="post">
@@ -53,7 +54,8 @@
           </tr>
 
           <tr>
-            <td><label>Identificación
+            <td>
+              <label>Identificación
                 <input type="text" name="" id="indentificacion">
               </label>
             </td>
@@ -100,32 +102,34 @@
             <td>
               <label>Servicio Adicional 1
                 <select name="s1" id="servicio1">
-                  <option value="restaurante">Restaurante</option>
-                  <option value="servicioHabitacion">Servicio a la habitacion</option>
-                  <option value="piscina">Piscina</option>
-                  <option value="miniGolf">Mini Golf</option>
-                  <option value="gimnasio">Gimnasio</option>
-                  <option value="bar">Bar</option>
+                  <option value="" hidden selected></option>
+                  <option value="100">Restaurante</option>
+                  <option value="200">Servicio a la habitacion</option>
+                  <option value="50">Piscina</option>
+                  <option value="75">Mini Golf</option>
+                  <option value="40">Gimnasio</option>
+                  <option value="20">Bar</option>
                 </select>
               </label>
             </td>
             <td>
-              <label id = "valorservicio1">Valor</label>
+              <label id="valorservicio1">Valor: </label>
             </td>
             <td>
               <label>Servicio Adicional 2
-                <select name="s2" id="servicio2">
-                  <option value="restaurante">Restaurante</option>
-                  <option value="servicioHabitacion">Servicio a la habitacion</option>
-                  <option value="piscina">Piscina</option>
-                  <option value="miniGolf">Mini Golf</option>
-                  <option value="gimnasio">Gimnasio</option>
-                  <option value="bar">Bar</option>
+                <select name="s2" id="servicio2" (change)="servicio2($event)">
+                  <option value="" hidden selected></option>
+                  <option value="100">Restaurante</option>
+                  <option value="200">Servicio a la habitacion</option>
+                  <option value="50">Piscina</option>
+                  <option value="75">Mini Golf</option>
+                  <option value="40">Gimnasio</option>
+                  <option value="20">Bar</option>
                 </select>
               </label>
             </td>
             <td>
-              <label id = "valorservicio2">Valor</label>
+              <label id="valorservicio2">Valor: </label>
             </td>
           </tr>
           <tr>
@@ -144,7 +148,7 @@
               <img src="" alt="" id ="foto-habitacion" class="foto-habitacion2">
             </td>
             <td>
-              <label id = "valorhabitacion">Valor habitacion</label>
+              <label id="valorhabitacion">Valor habitacion</label>
             </td>
             <td></td>
           </tr>

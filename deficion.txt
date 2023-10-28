@@ -13,7 +13,7 @@ Presentacion:
     public objetivo: 
         Extranjeros y gente local que quieran conocer y disfrutar de los servicios de establecimiento. Perfecto para gente de negocios o familias que necesiten hospedarse en un lugar relajante que cuente con todas comodidas y mas!
 
-tipo: hotel
+Tipo: hotel
 
 3 tipos de habitaciones:
     x - normales - $100 noche
