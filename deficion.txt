@@ -18,7 +18,7 @@ tipo: hotel
 3 tipos de habitaciones:
     x - normales - $100 noche
     xx - camas dobles - $200 noche 
-    xxx - 5 camas - $300 noche
+    xxx - camas triples - $300 noche
     xxxx - suite presidencial - $400 noche.
 
 Servicios adicionales:
