@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./assets/css/formulario.css">
+  <script src="./assets/js/validaciones.js"></script>
   <title>Reservación X Hotel</title>
 </head>
 
@@ -131,7 +132,7 @@
           <tr>
             <td>
               <label>Tipo de Habitación
-                <select name="" id="habitacion">
+                <select name="" id="habitacion" onload="habitacionimagen()" onchange="habitacionimagen()">
                   <option value="normal">Habitacion normal</option>
                   <option value="camadoble">Habitacion con cama doble</option>
                   <option value="5camas">Habitacion con 5 camas</option>
@@ -141,7 +142,7 @@
             </td>
             <td>
               <label >Foto Habitacion</label>
-              <img src="" alt="" id ="foto-habitacion" class="foto-habitacion2">
+              <img src="./assets/img/habitaciones_normales.jpg" alt="" width="265" id ="foto-habitacion">
             </td>
             <td>
               <label id="valorhabitacion">Valor habitacion</label>
@@ -408,6 +409,5 @@
       src="https://kit.fontawesome.com/48ff61c814.js"
       crossorigin="anonymous"
     ></script>
-    <script src="./assets/js/validaciones.js"></script>
   </body>
 </html>
