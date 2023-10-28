@@ -1,5 +1,5 @@
 
-datos = {
+let datos = {
     nombre: "",
     id: "",
     edad: "",
@@ -10,8 +10,8 @@ datos = {
     servicio1: "",
     servicio2: "",
     habitacion: "",
-    subtotal: (datos.habitacion*dias) + datos.servicio1 + datos.servicio2,
-    total: subtotal+(subtotal*datos.iva),
+    subtotal: "",
+    total: "",
     iva: 0.19
 }
 
@@ -76,9 +76,9 @@ function validarCel() {
 }
 
 function validarFechaIngresoSalida() {
-    fechaIngreso = new Date(document.getElementById("fechaIngreso"));
-    fechaSalida = new Date(document.getElementById("fechaSalida"));
-    fechaActual = new Date();
+    let fechaIngreso = new Date(document.getElementById("fechaIngreso").value);
+    let fechaSalida = new Date(document.getElementById("fechaSalida").value);
+    let fechaActual = new Date();
 
     if (fechaIngreso > fechaActual && fechaIngreso < fechaSalida) {
         if (fechaSalida > fechaActual && fechaSalida > fechaIngreso) {
@@ -92,9 +92,6 @@ function validarFechaIngresoSalida() {
 }
 
 function validarservicio1() {
-
-    console.log()
-
     datos.servicio1 = document.getElementById("servicio1").value;
     document.getElementById("valorservicio1").innerHTML = "Valor: " + "$" + datos.servicio1;
 }
@@ -133,4 +130,13 @@ function habitacionimagen(habitacion){
         default:
             break;
     }
+}
+
+function validarTotal() {
+    datos.subtotal = (datos.habitacion*dias) + datos.servicio1 + datos.servicio2;
+    document.getElementById("subtotal").innerHTML = "Subtotal: " + "$" + datos.subtotal;
+
+    datos.total = subtotal + (subtotal*datos.iva)
+    document.getElementById("total").innerHTML = "Valor: " + "$" + datos.total;
+
 }
