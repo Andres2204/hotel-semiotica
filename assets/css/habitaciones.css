@@ -1,18 +1,11 @@
-#planes {
-    text-align: center;
-    display: flex;
-    flex-wrap: wrap;
-    align-content: flex-end;
-    justify-content: center;
-    
-}
 
-.planes-card {
-    border-radius: 30px;
-    width: 20em;
-    /* height: 30em; */
+main{
+    background-image: url(/assets/img/playa.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+} 
+
+.planes-card{
     background-color: aliceblue;
-    margin: 10px;
-    padding: 10px;
-    display: inline-block;
 }
