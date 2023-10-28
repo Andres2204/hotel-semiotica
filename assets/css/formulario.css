@@ -1,60 +1,60 @@
 main {
-  padding: 1em;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-#formulario {
-  padding: 3em;
+#formulario { 
+    padding: 3em;
 }
 
 h3 {
-  width: auto;
+    width: auto;
 }
 
 tr, td {
-  padding: 1em
+    padding: 1em
 }
 
 input {
-  border-radius: 5px;
-  height: 2.4em;
-  border-style: none;
-  background-color: rgb(219, 219, 219);
-  padding: 10px;
+    border-radius: 5px;
+    height: 2.4em;
+    border-style: none;
+    background-color: rgb(219, 219, 219);
+    padding: 10px;
 }
 
 input:hover {
-  background-color: rgb(209, 209, 209);
+    background-color: rgb(209, 209, 209);
 }
 
 input:focus {
-  background-color: rgb(209, 209, 209);
+    background-color: rgb(209, 209, 209);
 }
 
 select {
-  border-radius: 5px;
-  height: 3em;
-  border-style: none;
-  background-color: rgb(219, 219, 219);
-  padding: 10px;
+    border-radius: 5px;
+    height: 3em;
+    border-style: none;
+    background-color: rgb(219, 219, 219);
+    padding: 10px;
 }
 
 option {
-  border-radius: 5px;
-  height: 3em;
-  border-style: none;
-  background-color: rgb(219, 219, 219);
-  padding: 10px;
+    border-radius: 5px;
+    height: 3em;
+    border-style: none;
+    background-color: rgb(219, 219, 219);
+    padding: 10px;
 
 }
 
 button {
-  background-color: cornflowerblue;
+    background-color: cornflowerblue;
 }
 
 button:hover {
-  background-color: rgb(78, 115, 184);
+    background-color: rgb(78, 115, 184);
 }

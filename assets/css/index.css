@@ -5,6 +5,11 @@
     font-family: 'Josefin Sans', sans-serif;
 }
 
+
+h1 {
+    text-align: center;
+}
+
 body {
     padding: 0px;
     margin: 0px;
@@ -18,7 +23,7 @@ header {
     justify-content: space-between;
     align-items: center;
     z-index: 5;
-}
+} 
 
 header div {
     margin: 3em;
@@ -36,12 +41,13 @@ header div {
     align-items: center;
     justify-content: center;
     z-index: 1;
+    background-color: rgb(71, 71, 71);
     
 }
 
 #presentacion img {
-    filter: blur(1px);
-    
+    filter: opacity(0.6);
+
 }
 
 #presentacionText {
@@ -52,11 +58,16 @@ header div {
 }
 
 #presentacionText span {
-    font-size: 5em;
+    font-size: 6em;
 }
 
 #presentacionDescripcion {
     width: 35vw;
+}
+
+#planes-seccion {
+    padding-top: 3em;
+    padding-bottom: 3em;
 }
 
 #planes {

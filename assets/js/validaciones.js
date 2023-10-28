@@ -24,7 +24,7 @@ function validarTodo() {
     validarFechaIngresoSalida();
     validarservicio1()
     validarservicio2()
-    habitacionimagen(document.getElementById("habitacion").value)
+    habitacionimagen()
     console.log(datos);
 }
 
@@ -105,27 +105,28 @@ function validarservicio2() {
     }
 }
 
-function habitacionimagen(habitacion){
+function habitacionimagen(){
+    habitacion = document.getElementById("habitacion").value
     switch (habitacion) {
         case "normal":
-            document.getElementsByClassName("foto-habitacion2")[0].src = "/assets/img/habitaciones_normales.jpg"
+            document.getElementById("foto-habitacion").src = "./assets/img/habitaciones_normales.jpg"
             datos.habitacion = 100
-            document.getElementById("valorhabitacion").innerHTML = "valorhabitacion: " + datos.habitacion+ "$"
+            document.getElementById("valorhabitacion").innerHTML = "Valor de Habitacion: " + datos.habitacion+ "$"
             break;
         case "camadoble":
-            document.getElementsByClassName("foto-habitacion2")[0].src = "/assets/img/habitaciones_camas_dobles.jpg"
+            document.getElementById("foto-habitacion").src = "./assets/img/habitaciones_camas_dobles.jpg"
             datos.habitacion = 200
-            document.getElementById("valorhabitacion").innerHTML = "valorhabitacion: " + datos.habitacion+ "$"
+            document.getElementById("valorhabitacion").innerHTML = "Valor de Habitacion: " + datos.habitacion+ "$"
             break;
-        case "5camas":
-            document.getElementsByClassName("foto-habitacion2")[0].src = "/assets/img/habitacion-triple-3-camas.jpg"
+        case "camastriples":
+            document.getElementById("foto-habitacion").src = "./assets/img/habitacion-triple-3-camas.jpg"
             datos.habitacion = 300
-            document.getElementById("valorhabitacion").innerHTML = "valorhabitacion: " + datos.habitacion+ "$"
+            document.getElementById("valorhabitacion").innerHTML = "Valor de Habitacion: " + datos.habitacion+ "$"
             break;
         case "presidencial":
-            document.getElementsByClassName("foto-habitacion2")[0].src = "/assets/img/Grand-Marina-Presidential-2.jpg"
+            document.getElementById("foto-habitacion").src = "./assets/img/Grand-Marina-Presidential-2.jpg"
             datos.habitacion = 400
-            document.getElementById("valorhabitacion").innerHTML = "valorhabitacion: " + datos.habitacion+ "$"
+            document.getElementById("valorhabitacion").innerHTML = "Valor de Habitacion: " + datos.habitacion+ "$"
             break;
         default:
             break;

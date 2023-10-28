@@ -1,10 +1,14 @@
-
 main{
     background-image: url(/assets/img/playa.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 } 
+
+#planes {
+    padding-top: 3em;
+    padding-bottom: 3em;
+}
 
 .planes-card{
     background-color: aliceblue;
