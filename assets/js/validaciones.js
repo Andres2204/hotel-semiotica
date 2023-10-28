@@ -25,7 +25,7 @@ function validarTodo() {
     validarservicio1()
     validarservicio2()
     habitacionimagen()
-    console.log(datos);
+    validarTotal()
 }
 
 function validarID() {
@@ -40,7 +40,6 @@ function validarID() {
 
 function validarNombre() {
     nombre = document.getElementById("nombre").value;
-    console.log(document.getElementById("nombre").nodeType)
     if (document.getElementById("nombre").nodeType === 1) {
         datos.nombre = nombre;
     } else {
@@ -56,7 +55,6 @@ function validarEdad() {
         alert("La fecha ingresada no es válida.")
     } else {
         let edad = fechaActual.getFullYear() - nacimiento.getFullYear();
-        console.log(edad)
         if (fechaActual.getMonth() < nacimiento.getMonth() || (fechaActual.getMonth() === nacimiento.getMonth() && fechaActual.getDate() < nacimiento.getDate())) {
             edad--;
             datos.edad = edad;
@@ -84,7 +82,8 @@ function validarFechaIngresoSalida() {
         if (fechaSalida > fechaActual && fechaSalida > fechaIngreso) {
             datos.fechaIngreso = fechaIngreso;
             datos.fechaSalida = fechaSalida;
-            datos.dias = fechaSalida - fechaIngreso;
+            datos.dias = (fechaSalida - fechaIngreso) / (1000 * 60 * 60 * 24);
+
         }
     } else {
         alert("Revisa las fechas de ingreso y salida.");
@@ -92,14 +91,14 @@ function validarFechaIngresoSalida() {
 }
 
 function validarservicio1() {
-    datos.servicio1 = document.getElementById("servicio1").value;
+    datos.servicio1 = parseInt(document.getElementById("servicio1").value);
     document.getElementById("valorservicio1").innerHTML = "Valor: " + "$" + datos.servicio1;
 }
 
 function validarservicio2() {
     if(document.getElementById("servicio2").value != document.getElementById("servicio1").value){
-        datos.servicio2 = document.getElementById("servicio2").value;
-            document.getElementById("valorservicio2").innerHTML = "Valor: " + "$" + datos.servicio2;
+        datos.servicio2 = parseInt(document.getElementById("servicio2").value);
+        document.getElementById("valorservicio2").innerHTML = "Valor: " + "$" + datos.servicio2;
     }else{
         alert("No puedes escoger el mismo servicio dos veces, vuelve a intentarlo");
     }
@@ -134,10 +133,10 @@ function habitacionimagen(){
 }
 
 function validarTotal() {
-    datos.subtotal = (datos.habitacion*dias) + datos.servicio1 + datos.servicio2;
+    datos.subtotal = (datos.habitacion*datos.dias) + datos.servicio1 + datos.servicio2;
     document.getElementById("subtotal").innerHTML = "Subtotal: " + "$" + datos.subtotal;
 
-    datos.total = subtotal + (subtotal*datos.iva)
+    datos.total = datos.subtotal + (datos.subtotal*datos.iva)
     document.getElementById("total").innerHTML = "Valor: " + "$" + datos.total;
 
 }
