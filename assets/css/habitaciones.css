@@ -6,6 +6,11 @@ main{
     background-size: cover;
 } 
 
+#planes {
+    padding-top: 3em;
+    padding-bottom: 3em;
+}
+
 .planes-card{
     background-color: aliceblue;
 }
